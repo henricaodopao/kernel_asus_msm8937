@@ -1137,4 +1137,15 @@ config TOUCHSCREEN_MAXIM_STI
 
 source "drivers/input/touchscreen/gt9xx/Kconfig"
 
+config TOUCHSCREEN_FT5436_DRIVER
+        bool "ft5336 touchpanel series"
+        depends on I2C
+        help
+          Say Y here if you have a ft5336 touchpanel touchscreen.
+          Gt9xx controllers are multi touch controllers which can
+          report 5 touches at a time.
+
+           If unsure, say N.
+ source "drivers/input/touchscreen/ft5436/Kconfig"
+
 endif
